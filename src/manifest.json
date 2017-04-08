@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Node",
+  "description": "Node is love, node is life",
+  "version": "1.1",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "bitcamp-logo-badge.png"
+  },
+  "web_accessible_resources": [
+    "main.css"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.github.com/*/*"],
+      "js": ["addStars.js"],
+      "css": ["main.css"]
+    }
+  ]
+}
